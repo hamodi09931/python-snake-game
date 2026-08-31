@@ -6,6 +6,10 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
+# Colors for enhanced UI
+HEAD_COLOR = "#00ff00"  # Bright green for snake head
+BODY_COLOR = "#00cc00"  # Darker green for snake body
+
 class Snake:
     def __init__(self):
         self.segments = []
@@ -19,12 +23,15 @@ class Snake:
             
     def add_segment(self, position):
         new_segment = Turtle("square")
-        new_segment.color("white")
+        # Head is bright green, body segments are darker green
+        if len(self.segments) == 0:
+            new_segment.color(HEAD_COLOR)  # Head color
+        else:
+            new_segment.color(BODY_COLOR)  # Body color
         new_segment.penup()
         new_segment.goto(position)
         self.segments.append(new_segment)
         self.head = self.segments[0]
-        #self.segments.append(new_segment)
         
         
     def extend(self):

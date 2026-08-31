@@ -5,11 +5,13 @@ from score import Score
 from rong import Deat
 import time
 
+# Initialize screen
 screen = Screen()
 screen.setup(width=600, height=600)
-screen.title("my snke game ")
-screen.bgcolor("black")
+screen.title("🐍 Python Snake Game - Use Arrow Keys to Play")
+screen.bgcolor("#1a1a2e")  # Dark blue background
 screen.tracer(0)
+screen.update()
 
 snake = Snake()
 food = Food()

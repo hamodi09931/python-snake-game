@@ -1,7 +1,7 @@
 from turtle import Turtle
-# قائمة تحتوي على نقاط في الزوايا الأربعة فقط
+
+# Border corner positions for visual wall representation
 CORNER_LIST = [(-260, 260), (260, 260), (-260, -260), (260, -260), (-260, 220), (260, 260), (-260, -260), (260, -260)]
-GOOIG = 20
 
 class Deat(Turtle):
     def __init__(self):
@@ -12,15 +12,10 @@ class Deat(Turtle):
         for direction_list in self.ALL_LIST:
             for pos in direction_list:
                 self.criet_turtle(pos)
-            
-                
-                
-            
-        
-        
-    def criet_turtle (self, posuton):
+
+    def criet_turtle(self, posuton):
         new_turtle = Turtle("square")
-        new_turtle.color("white")
+        new_turtle.color("#00ffff")  # Bright cyan for border/walls
         new_turtle.penup()
         new_turtle.goto(posuton)
         

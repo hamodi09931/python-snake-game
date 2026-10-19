@@ -13,6 +13,8 @@ A classic Snake game built with Python's Turtle graphics module. Control the sna
 - 🍎 **Random food generation** - Unpredictable food placement
 - 📊 **Score tracking** - Keep track of your progress
 - 🧱 **Wall collision detection** - Game ends when hitting boundaries
+- ⚡ **Progressive difficulty** - The snake gets faster as your score increases
+- 🚧 **Corner obstacles** - Visible corner barriers end the game when hit
 - 🐍 **Self-collision detection** - Game ends when snake hits itself
 - 🎯 **Simple and clean game loop** - Easy to understand and modify
 - 🎨 **Enhanced UI** - Beautiful colors and smooth animations
@@ -55,14 +57,15 @@ snake-game/
 - **Snake**: Starts with 3 segments, grows when eating food
 - **Food**: Randomly spawned on the game grid
 - **Scoring**: +1 point for each food eaten
-- **Game Over**: Triggered by wall collision or self-collision
+- **Progressive speed**: Speed increases every 3 points, up to the maximum configured speed
+- **Game Over**: Triggered by hitting the screen boundary, a corner obstacle, or the snake's tail
 - **Colors**: Dark theme with contrasting UI elements
 
 ## 🛠️ Customization
 
 You can easily customize the game by editing:
 - Screen size in `main.py` (default: 600x600)
-- Game speed by adjusting `time.sleep()` value
+- Game speed progression in `main.py` by adjusting the `time_list` values and score interval
 - Colors in `snake.py`, `food.py`, and `score.py`
 - Game grid boundaries
 
